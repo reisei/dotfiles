@@ -32,6 +32,9 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
+nnoremap <silent> <F3> :set norelativenumber<CR> :set nonumber<CR>
+nnoremap <silent> <F4> :set number<CR> :set relativenumber<CR>
+
 autocmd Filetype python setlocal ts=4 sw=4 sts=4 expandtab colorcolumn=120
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
 
