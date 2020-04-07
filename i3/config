@@ -130,6 +130,10 @@ bindsym XF86AudioMicMute        exec --no-startup-id amixer -c 1 set Capture tog
 bindsym XF86MonBrightnessUp exec light -A 5; # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5; # decrease screen brightness
 
+# PrintScreen
+bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
+
+
 for_window [class="KeePassXC"] floating enable
 for_window [class="Telegram"] floating enable
 for_window [class="vlc"] floating enable
